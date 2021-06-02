@@ -1,0 +1,9 @@
+<template>
+    <lightning-input type="text" label="Search by name"  onchange={getKeyword} value={keyword}></lightning-input>
+    <lightning-button label="Search" onclick={handleClick}></lightning-button>
+    <ul>
+        <template for:each={results} for:item="result">
+        <li key={result.Id}>{result.Name}</li>
+        </template>
+    </ul>
+</template>
